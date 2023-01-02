@@ -1,34 +1,15 @@
-import { useState } from "react";
-export default function Form() {
+export default function Form(props) {
 
-    const [location, setlocation] = useState("");
-    const [maxumimCookie, setmaxumimCookie] = useState("");
-    const [minumimCookie, setminumimCookie] = useState("");
-    const [avgCookie, setavgCookie] = useState("");
-
-
-    const submitFuction = (e) => {
-        e.preventDefault()
-
-
-        setlocation(e.target.location.value)
-        setmaxumimCookie(e.target.max.value)
-        setminumimCookie(e.target.min.value)
-        setavgCookie(e.target.avg.value)
-        //all
-
-
-
-    }
+    
 
 
 
 
     return (
         <>
-            <form onSubmit={submitFuction} className='' >
+            <form onSubmit={props.allInfo} className='' >
 
-                <div className='flex flex-col items-center gap-5 p-5 text-center  border-[#270D0B] border-2 shadow-md rounded mx-20 w-1/5 my-10'>
+                <div className='flex flex-col items-center gap-5 p-5 text-center  border-[#270D0B] border-2 shadow-md rounded mx-20  my-10'>
 
                     <label for="location"
                         className='text-center font-semibold text-[#270D0B]'
@@ -99,7 +80,7 @@ export default function Form() {
             </form>
 
 
-            <p>{(location || minumimCookie || maxumimCookie || avgCookie) && `{'location' : ${location},'minCustomers':${minumimCookie}, 'maxCustomers':${maxumimCookie}, 'avgCookie':${avgCookie}}`}</p>
+            {/* <p>{(location || minumimCookie || maxumimCookie || avgCookie) && `{'location' : ${location},'minCustomers':${minumimCookie}, 'maxCustomers':${maxumimCookie}, 'avgCookie':${avgCookie}}`}</p> */}
 
         </>
     )
