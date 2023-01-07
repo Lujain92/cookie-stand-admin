@@ -2,7 +2,7 @@ import Form from './Form'
 import Card from './card'
 import { useState } from "react";
 import Image from 'next/image';
-
+import ReportTable from './ReportTable';
 
 export default function Main() {
 
@@ -31,7 +31,7 @@ export default function Main() {
 
         setresult([...result, objResult])
 
-
+      
 
 
     }
@@ -44,6 +44,12 @@ export default function Main() {
                 result={result}
 
             />
+           <button>
+            Overview
+           </button>  
+
+
+        <ReportTable/>
 
            
 
