@@ -1,10 +1,12 @@
+'use client'
 import './globals.css'
 import Header from './components/Header'
-
-
+import ThemeWrapper from './contexts/theme'
 import Footer from './components/Footer'
+import { AuthWrapper } from './contexts/Auth'
 
 export default function RootLayout({ children }) {
+ 
   return (
     <html lang="en">
       {/*
@@ -13,15 +15,16 @@ export default function RootLayout({ children }) {
       */}
       <head />
      
-
-      <body  className='bg-[#EFE2B2]'>
-      <Header/>
+      <AuthWrapper><ThemeWrapper>
+        <body  className='bg-[#EFE2B2] dark:bg-[#808080]' >
+      <Header />
         {children}
       
         <Footer/>
       </body>
-     
-
+      </ThemeWrapper>
+</AuthWrapper>
+      
       
     </html>
   )

@@ -15,7 +15,7 @@ export function AuthWrapper({children}) {
     })
     async function login(userInfo) {
         // end a request to the server
-        const url= "https://cookie-stands-v001.herokuapp.com/api/token/" //the server url
+        const url= "https://cookies-stands-g3.herokuapp.com/api/token/" //the server url
         const res= await axios.post(url,userInfo)
         setGlobalState({
             tokens: res.data,

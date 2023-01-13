@@ -18,7 +18,7 @@ export default function Form(props) {
                         id="location"
                         name="location"
                         placeholder="Your location.."
-                        className='text-center bg-[#BD8C61] placeholder-[#EFE2B2]  rounded border border-[#270D0B]'
+                        className='text-center bg-[#BD8C61] dark:text-white dark:bg-black placeholder-[#EFE2B2]  rounded border border-[#270D0B]'
 
 
                     />
@@ -32,7 +32,7 @@ export default function Form(props) {
                         id="min"
                         name="min"
                         placeholder="Minumim .."
-                        className='text-center bg-[#BD8C61] placeholder-[#EFE2B2] rounded border border-[#270D0B]'
+                        className='text-center bg-[#BD8C61]  dark:text-white  dark:bg-black placeholder-[#EFE2B2] rounded border border-[#270D0B]'
 
                     />
 
@@ -48,7 +48,7 @@ export default function Form(props) {
                         id="max"
                         name="max"
                         placeholder="Maxumim.."
-                        className='text-center bg-[#BD8C61] text-red placeholder-[#EFE2B2] rounded border border-[#270D0B]'
+                        className='text-center bg-[#BD8C61] dark:bg-black text-red placeholder-[#EFE2B2] dark:text-white rounded border border-[#270D0B]'
                     />
 
 
@@ -63,11 +63,11 @@ export default function Form(props) {
                         id="avg"
                         name="avg"
                         placeholder="average.."
-                        className='text-center bg-[#BD8C61] placeholder-[#EFE2B2] rounded border border-[#270D0B]'
+                        className='text-center bg-[#BD8C61] dark:text-white dark:bg-black placeholder-[#EFE2B2] rounded border border-[#270D0B]'
                     />
 
 
-                    <input type="submit" value="Create" class="bg-transparent hover:bg-[#270D0B] text-black font-semibold hover:text-white py-2 px-4 border border-[#270D0B] hover:border-transparent rounded" />
+                    <input type="submit" value="Create" class="bg-transparent hover:bg-[#270D0B]  dark:bg-white text-black font-semibold hover:text-white  dark:hover:text-black py-2 px-4 border border-[#270D0B] hover:border-transparent rounded" />
 
                 </div>
 
@@ -79,8 +79,6 @@ export default function Form(props) {
 
             </form>
 
-
-            {/* <p>{(location || minumimCookie || maxumimCookie || avgCookie) && `{'location' : ${location},'minCustomers':${minumimCookie}, 'maxCustomers':${maxumimCookie}, 'avgCookie':${avgCookie}}`}</p> */}
 
         </>
     )
